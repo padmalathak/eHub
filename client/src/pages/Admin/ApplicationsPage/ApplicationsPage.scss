@@ -1,0 +1,31 @@
+.app-table {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+
+  border: 1px solid #661e1e; // Optional: add border for table-like appearance
+
+  .table {
+    &__row {
+      display: grid;
+      grid-template-columns: repeat(
+        2,
+        1fr
+      ); // Should match number of columns in the table
+      border-bottom: 1px solid #ccc;
+    }
+
+    &__cell {
+      padding: 8px;
+      border-right: 1px solid #6e1818; // Optional: add border between cells
+      border-top: 1px solid #a53434; // Optional: add border between rows
+      text-align: center;
+
+      &--hover {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

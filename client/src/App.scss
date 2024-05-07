@@ -1,0 +1,34 @@
+@use "./styles/partials/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 solid transparent;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  box-sizing: border-box;
+  // background-color: $bg-color;
+  color: #202020;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 13px;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+p,
+figure {
+  margin: 0;
+  padding: 0;
+}
+p,
+h4 {
+  color: white;
+}

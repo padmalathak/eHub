@@ -1,0 +1,225 @@
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/typography" as *;
+
+.user {
+  padding: 0 1rem;
+  overflow: auto;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    border-bottom: 2px solid $light-text;
+
+    @include tablet {
+      flex-wrap: nowrap;
+    }
+    // border-top: 2px solid $secondary-cloud;
+    // height: 11.5rem;
+
+    &:hover {
+      background-color: $secondary-slate;
+      cursor: pointer;
+    }
+
+    // &--firstRow {
+    //   //   border: none;
+    // }
+
+    &--first {
+      order: 1;
+      width: 45%;
+    }
+
+    &--second {
+      order: 3;
+      width: 45%;
+    }
+
+    &--third {
+      order: 2;
+      width: 45%;
+      margin-left: 0.5rem;
+    }
+
+    &--fourth {
+      order: 4;
+      width: 45%;
+      margin-left: 0.5rem;
+    }
+
+    &--fifth {
+      order: 4;
+      width: 45%;
+      //   margin-left: 0.5rem;
+    }
+
+    &--sixth {
+      order: 5;
+      //   width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+    }
+
+    @include tablet {
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem 1rem 1.5rem;
+      height: 5rem;
+
+      &--first {
+        order: 1;
+        width: 22%;
+      }
+
+      &--second {
+        order: 2;
+        width: 14%;
+      }
+
+      &--third {
+        order: 3;
+        width: 20%;
+      }
+
+      &--fourth {
+        order: 4;
+        width: 26%;
+      }
+
+      &--fifth {
+        order: 5;
+        width: 26%;
+      }
+
+      &--sixth {
+        order: 6;
+        margin-top: 1rem;
+        width: 10%;
+      }
+    }
+
+    @include desktop {
+      padding: 0 2.25rem;
+      height: 4.5rem;
+
+      &--first {
+        width: 18%;
+      }
+
+      &--second {
+        width: 27%;
+      }
+
+      &--third {
+        width: 15%;
+      }
+
+      &--fourth {
+        width: 20%;
+      }
+
+      &--fifth {
+        display: none;
+      }
+
+      &--sixth {
+        width: 9.5%;
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__sectionTitle {
+    // @include font-mobile-tableheader;
+    text-transform: uppercase;
+    padding-top: 1rem;
+    // color: $secondary-slate;
+    font-size: clamp(0.6rem, 2.95vw, 0.7rem);
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__name-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__name {
+    @include font-mobile-llb;
+    font-size: clamp(0.6rem, 3.75vw, 0.8rem);
+    margin-top: 0.325rem;
+    text-decoration: none;
+    // color: $primary-indigo;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include tablet {
+      //   @include font-dt-llb;
+      font-size: clamp(0.67rem, 1.75vw, 0.8rem);
+    }
+  }
+
+  &__chevron {
+    padding: 0.5rem 0 0 0.25rem;
+    width: clamp(1.3rem, 3.3vw, 1.5rem);
+    position: relative;
+    left: 0;
+    transition: left 0.3s ease;
+    &:hover {
+      left: 4px;
+    }
+
+    @include tablet {
+      width: clamp(1rem, 3vw, 1.5rem);
+    }
+  }
+
+  &__text {
+    @include font-mobile-bodym;
+    font-size: clamp(0.6rem, 3.75vw, 0.8rem);
+    // color: $primary-black;
+    margin-top: 0.325rem;
+
+    @include tablet {
+      @include font-dt-bodym;
+      font-size: clamp(0.67rem, 1.75vw, 0.8rem);
+    }
+  }
+
+  &__delete {
+    width: clamp(1.3rem, 3.3vw, 1.5rem);
+    cursor: pointer;
+
+    @include tablet {
+      width: clamp(1rem, 3vw, 1.5rem);
+    }
+  }
+
+  &__edit {
+    margin-right: 1.5rem;
+    width: clamp(1.3rem, 3.3vw, 1.5rem);
+    cursor: pointer;
+
+    @include tablet {
+      width: clamp(1rem, 3vw, 1.5rem);
+      margin-left: 0.5rem;
+    }
+    @include desktop {
+      margin-left: 0;
+    }
+  }
+}

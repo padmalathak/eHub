@@ -1,0 +1,180 @@
+@use "./variables" as *;
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin font-mobile-llb {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 600;
+}
+@mixin font-mobile-tableheader {
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+}
+@mixin font-mobile-bodyl {
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 400;
+}
+@mixin font-mobile-bodym {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+}
+@mixin font-mobile-bodys {
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+@mixin font-dt-pageheader {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+@mixin font-dt-subheader {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+@mixin font-dt-llb {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+@mixin font-dt-tableheader {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+}
+@mixin font-dt-bodyl {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+@mixin font-dt-bodym {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+@mixin font-dt-bodys {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin font-mobile-pageheader {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+// Cancel Button
+@mixin cancel-button {
+  @include button;
+  color: $secondary-slate;
+  border: 1px solid $secondary-cloud;
+  background-color: $primary-white;
+
+  &:hover {
+    border: 1px solid $primary-indigo;
+    color: $primary-black;
+  }
+}
+@mixin button {
+  outline: none;
+  border-radius: 5px;
+  padding: 12px 30px;
+  font-size: medium;
+  text-transform: uppercase;
+  background: $main;
+  color: $white;
+  width: 30%;
+  &:hover,
+  &:focus {
+    background: $main-dark;
+  }
+}
+
+@mixin success {
+  text-align: center;
+  color: $import-main;
+  font-weight: $thin;
+  margin: 0 0 40px;
+}
+
+@mixin row-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin form-tab {
+  padding: 15px;
+  background: rgba($gray-light, 0.25);
+  color: $gray-light;
+  font-size: 20px;
+  float: left;
+
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+  &:hover {
+    background: $main-dark;
+    color: $white;
+  }
+}
+
+@mixin form-field {
+  height: 36px;
+  border: 1px solid $secondary-cloud;
+  border-radius: 20px;
+  padding: 0.5rem;
+  &::placeholder {
+    color: $secondary-slate;
+  }
+  &:focus {
+    border-color: $primary-indigo;
+    outline: none;
+  }
+  @include desktop {
+    margin-right: 1.25rem;
+  }
+}
+
+@mixin setbgImage($pngs) {
+  @each $png in $pngs {
+    .app-card__#{$png} {
+      background-image: url(../../assets/logo/#{$png}.png);
+      width: 100%;
+      background-position: center center;
+      height: 100px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  } 
+}

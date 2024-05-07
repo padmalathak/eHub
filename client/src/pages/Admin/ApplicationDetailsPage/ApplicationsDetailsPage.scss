@@ -1,0 +1,30 @@
+.user-edit {
+    margin: auto;
+
+    &__header{
+        display: flex;
+        padding: 2rem 0 1rem 0;
+    }
+
+    &__title {
+        margin-left: 10px;
+        color: white    ;
+    }
+
+    &__link{
+      display: flex;
+      margin: 0 3rem;
+    }
+  }
+
+  .app-edit {
+    &__title{
+        text-align: center;
+        padding-bottom: 2rem;
+        color: white;
+    }
+  }
+
+  .signout_button {
+    display: none;
+  }

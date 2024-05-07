@@ -1,0 +1,41 @@
+.card {
+  // margin-right: 2rem;
+  > * {
+    margin: 10px 0;
+  } 
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+ 
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    > * {
+      margin: 10px 0;
+    } 
+  }
+  &__label {
+    font-size: x-large;
+  }
+  &__input {
+    height: 2rem;
+    border-radius: 5px;
+    padding: 12px;
+  }
+  &__button {
+    margin-top: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: #a68340;
+    color: white;
+    font-weight: 600;
+    font-size: medium;
+
+    &:hover {
+      background-color: #d19c35;
+      cursor: pointer;
+    }
+  }
+}

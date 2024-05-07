@@ -1,0 +1,52 @@
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/typography" as *;
+
+body {
+  background-image: url("../../../assets/images/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  //   height: 85vh;
+}
+
+.header {
+  &__button-container {
+    display: none;
+  }
+}
+
+.login {
+  width: 90%;
+  margin: 16% auto;
+  padding: 14%;
+  background-color: $bg-color;
+  color: white;
+  border-radius: 30px;
+
+  @include tablet {
+    display: flex;
+    margin: 2rem;
+    width: 35%;
+    max-width: 450px;
+    background-color: $bg-color;
+    color: white;
+    padding: 5rem 3rem;
+    border-radius: 35px;
+    margin-left: 7%;
+    margin-top: 5.5rem;
+  }
+  &__form {
+    width: 100%;
+  }
+
+  &__image {
+    width: 50%;
+  }
+  &__img {
+    width: 100%;
+    height: 80vh;
+    border-radius: 10px;
+  }
+}

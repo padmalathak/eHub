@@ -1,0 +1,30 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+
+.form {
+  &__input {
+    font-size: 22px;
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    background: none;
+    background-image: none;
+    border: 1px solid $gray-light;
+    color: $white;
+    border-radius: 0;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    &:focus {
+      outline: 0;
+      border-color: $main;
+    }
+  }
+  &__label {
+    color: rgba($white, 0.5);
+    transition: all 0.25s ease;
+    font-size: 22px;
+    .req {
+      margin: 8px;
+      color: $main;
+    }
+  }
+}

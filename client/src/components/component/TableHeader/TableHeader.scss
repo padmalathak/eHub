@@ -1,0 +1,127 @@
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/typography" as *;
+
+.tableHeader {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $background-grey;
+    padding: 0 1.5rem;
+
+    &__container {
+      display: flex;
+      padding: 0.5rem 0;
+
+      @include desktop {
+        padding: 0.5rem;
+      }
+
+      &--hidden {
+        display: none;
+      }
+    }
+
+    &__title {
+      color: $secondary-slate;
+      @include font-dt-tableheader;
+      // font-size: clamp(0.6rem, 1.55vw, 0.75rem);
+      font-weight: 600;
+      line-height: 1rem;
+      margin: 0;
+    }
+
+    &__icon {
+      height: 0.9rem;
+      align-self: center;
+      margin-left: 0.4rem;
+      filter: invert(63%) sepia(91%) saturate(459%) hue-rotate(172deg) brightness(100%) contrast(87%);
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    // Warehouse List Header
+    &__user-container {
+      &--first {
+        width: 15%;
+      }
+
+      &--second {
+        width: 16%;
+      }
+
+      &--third {
+        width: 21%;
+      }
+
+      &--fourth {
+        width: 26.5%;
+      }
+
+      &--fifth {
+        width: 0%;
+      }
+
+      &--sixth {
+        width: 9%;
+      }
+
+      @include desktop {
+        &--first {
+          width: 20%;
+        }
+
+        &--second {
+          width: 29%;
+        }
+
+        &--third {
+          width: 17%;
+        }
+
+        &--fourth {
+          width: 22%;
+        }
+
+        &--fifth {
+          width: 0%;
+        }
+
+        &--sixth {
+          width: 10%;
+        }
+      }
+    }
+
+    // Inventory List Header
+    // &__inventory-container {
+    //   &--first {
+    //     width: 21%;
+    //   }
+
+    //   &--second {
+    //     width: 16%;
+    //   }
+
+    //   &--third {
+    //     width: 17%;
+    //   }
+
+    //   &--fourth {
+    //     width: 10%;
+    //   }
+
+    //   &--fifth {
+    //     width: 16%;
+    //   }
+
+    //   &--sixth {
+    //     width: 9%;
+    //   }
+    // }
+  }
+}

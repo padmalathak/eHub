@@ -1,0 +1,128 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+
+// a {
+//   text-decoration: none;
+//   color: $main;
+//   transition: 0.5s ease;
+//   &:hover {
+//     color: $main-dark;
+//   }
+// }
+
+.form {
+  background: $import-form-bg;
+  height: max-content;
+  // padding: 40px;
+  max-width: 600px;
+  margin: 10px auto;
+  border-radius: $br;
+  box-shadow: 0 4px 10px 4px rgba($import-form-bg, 0.3);
+  display: block;
+}
+
+.tab {
+  list-style: none;
+  margin: 0 0 20px 0;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @include row-flex;
+  justify-content: center;
+  &__title {
+    text-align: center;
+    color: $white;
+    font-weight: $thin;
+    margin: 0 0 40px;
+  }
+  &__success {
+    @include success;
+  }
+  &__error {
+    @include success;
+    color: rgb(214 103 103);
+    // font-weight: bold;
+  }
+
+  &__list {
+    padding: 2rem;
+    // width: 100%;
+  }
+
+  &__link {
+    width: 100%;
+    @include form-tab;
+  }
+  &--active {
+    background: $import-main;
+    color: $white;
+  }
+  &-content{
+    padding: 0 40px 10px;
+    margin: auto;
+  }
+}
+
+label.active {
+  transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+  .req {
+    opacity: 0;
+  }
+}
+
+label.highlight {
+  color: $white;
+}
+
+textarea {
+  border: 2px solid $gray-light;
+  resize: vertical;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.top-row {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  > div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.button {
+  @include button;
+  display: block;
+  margin: 20px auto;
+  padding: 15px;
+  width: unset;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.forgot {
+  margin-top: -20px;
+  text-align: right;
+}
+
+.tab-content {
+  padding: 0 40px 10px;
+}
+

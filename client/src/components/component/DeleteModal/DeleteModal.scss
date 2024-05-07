@@ -1,0 +1,130 @@
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+
+// -----------------Modal Body---------------
+
+.modal {
+  &__background {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include flex-row;
+    justify-content: center;
+    align-items: center;
+    // font-family: "Titillium Web";
+
+    @include tablet {
+      align-items: flex-start;
+    }
+  }
+
+  &__container {
+    background-color: white;
+    width: 100vw;
+    min-height: 100vh;
+    border-radius: 22px;
+    @include flex-column;
+
+    @include tablet {
+      width: 85vw;
+      max-width: 85vw;
+      margin: 0 auto;
+      margin-top: 12rem;
+      min-height: auto;
+    }
+
+    @include desktop {
+      margin-top: 10.5rem;
+      width: 50vw;
+    }
+  }
+
+  &__title {
+    @include font-mobile-pageheader;
+    color: black;
+    @include tablet {
+      @include font-dt-pageheader;
+    }
+  }
+
+  &__close {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    @include flex-row;
+    justify-content: end;
+    &:hover {
+        filter: invert(32%) sepia(38%) saturate(2645%) hue-rotate(350deg) brightness(93%) contrast(97%);
+        cursor: pointer;
+    }
+  }
+
+  &__body {
+    padding: 1rem;
+    flex: 1;
+
+    @include tablet {
+      padding-right: 15%;
+      padding-left: 10%;
+      padding-top: 0;
+    }
+  }
+
+  &__message {
+    margin-top: 1rem;
+    @include font-mobile-bodyl;
+    color: black;
+    @include tablet {
+      @include font-dt-bodyl;
+    }
+  }
+}
+
+// --------------Buttons---------------
+// Footer div - wraps cancel and delete button
+.button__footer {
+  margin: 1rem;
+
+  @include flex-row;
+  gap: 1rem;
+
+  @include tablet {
+    justify-content: end;
+    margin-right: 10%;
+    margin-bottom: 2.5rem;
+  }
+}
+
+// delete button
+.btn-danger {
+  @include button;
+  display: block;
+  width: 50%;
+  margin: 0;
+  background-color: $support-red;
+  border: 0;
+  color: white;
+  &:hover {
+    background-color: $primary-black;
+    border-color: $primary-black;
+  }
+
+  @include tablet {
+    width: auto;
+  }
+}
+
+// Cancel button
+.btn-default {
+  @include cancel-button;
+  display: block;
+  margin: 0;
+  width: 50%;
+
+  @include tablet {
+    width: auto;
+  }
+}

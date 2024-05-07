@@ -1,0 +1,55 @@
+@use "../../../styles/partials/mixins" as *;
+
+.apps {
+  width: 100%;
+  // margin: 2rem;
+  background-color: white;
+  padding-left: 1rem;
+  // border-radius: 10px;
+
+  &__title{
+    margin: 23px;
+  }
+}
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+
+.app-card {
+  //   width: 25%;
+  background-color: #0000004d;
+  width: 20%;
+  border-radius: 10px;
+  padding: 10px;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+  }
+
+  &__img {
+    display: block;
+    // width: 7rem;
+    width: 100%;
+
+    &-wrapper {
+      width: 100%;
+      background-position: center center;
+      height: 100px;
+      background-size: cover;
+      background-image: url('https://www.pngall.com/wp-content/uploads/13/Slack-Logo-Transparent.png');
+    }
+  }
+
+  &__text{
+    color: white;
+    text-align: center;
+    font-size: large;
+  }
+}
+
+@include setbgImage(('slack', 'salesforce', 'Office365', 'Zoom'));

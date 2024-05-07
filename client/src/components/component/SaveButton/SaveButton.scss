@@ -1,0 +1,15 @@
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/typography" as *;
+@use "../../../styles/partials/variables" as *;
+
+.save-button {
+  @include button;
+  width: 100%;
+
+  color: $primary-white;
+  border-style: none;
+  background-color: $primary-indigo;
+  &:hover {
+    background-color: $background-graphite;
+  }
+}

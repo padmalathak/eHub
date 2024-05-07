@@ -1,0 +1,125 @@
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/typography" as *;
+
+.search {
+
+  width: 100%;
+  padding: 0 1.5rem;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: column;
+
+  @include tablet {
+    // flex-direction: row;
+    // justify-content: space-between;
+    height: 4.75rem;
+    border-bottom: none;
+    margin-bottom: 0;
+    padding: 0.5rem;
+  }
+
+  @include desktop {
+    height: 11rem;
+    padding: 0 2rem;
+    height: 5.5rem;
+    // display: flex;
+  }
+
+  // &__header-container {
+  //   display: flex;
+  //   width: 100%;
+  //   flex-direction: column;
+  //   align-content: center;
+  //   margin-bottom: 1.5rem;
+
+  //   @include tablet {
+  //     flex-direction: row;
+  //     align-items: center;
+  //     justify-content: space-between;
+  //     margin: 0;
+  //     padding-bottom: 0.5rem;
+  //   }
+  // }
+
+  // &__title-container {
+  //   margin: 2.5rem 0 1.25rem;
+  // }
+
+  // &__title {
+  //   @include font-mobile-pageheader;
+
+  //   @include tablet {
+  //     @include font-dt-pageheader;
+  //   }
+  // }
+
+  // &__subContainer {
+  //   @include tablet {
+  //     display: flex;
+  //     flex-direction: row;
+  //     justify-content: center;
+  //     align-items: center;
+  //   }
+  // }
+
+  &__input-container {
+    @include tablet {
+      align-self: flex-end;
+      display: flex;
+    }
+  }
+
+  &__input {
+    background: $primary-white;
+    background-image: url(../../../assets/icons/search-24px.svg);
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    height: 36px;
+    width: 100%;
+    border-radius: 25px;
+    text-indent: 1rem;
+    border: 1px solid $secondary-cloud;
+    &::placeholder {
+      padding-left: 0.25rem;
+    }
+    &:focus {
+      border-color: $primary-indigo;
+      outline: none;
+    }
+
+    @include tablet {
+      width: 100%;
+      background-position: 90% center;
+      font-size: 0.875rem;
+      margin-right: 2.5rem;
+      height: 38.5px;
+    }
+
+    @include desktop {
+      width: 17rem;
+      background-position: 95% center;
+      margin-left: auto;
+    }
+  }
+  // &__link {
+  //   width: 100%;
+  // }
+  // &__button {
+  //   display: flex;
+  //   width: 100%;
+  //   padding-top: 0.625rem;
+  //   @include tablet {
+  //     align-self: flex-end;
+  //     margin: 0 0 0 0.75rem;
+  //     width: 11.5rem;
+  //     @include desktop {
+  //       margin: 0 0 0 0.75rem;
+  //     }
+  //   }
+  //   .add-button {
+  //     margin: 0;
+  //   }
+  // }
+}

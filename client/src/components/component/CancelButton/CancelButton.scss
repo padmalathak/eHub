@@ -1,0 +1,31 @@
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/typography" as *;
+@use "../../../styles/partials/variables" as *;
+
+.cancel-link {
+  text-decoration: none;
+  width: 100%;
+  margin-right: 0.5rem;
+}
+.cancel-button {
+  @include button;
+  outline: none;
+  border-radius: 5px;
+  padding: 12px 30px;
+  font-size: medium;
+  text-transform: uppercase;
+  background: rgba(79, 109, 155, 0.768627451);
+  color: #ffffff;
+  width: 30%;
+  width: 100%;
+  color: #5c667e;
+  border: 1px solid #bdc5d5;
+  background-color: #ffffff;
+  margin-right: 40px;
+
+
+  &:hover {
+    border: 1px solid $primary-indigo;
+    color: $primary-indigo;
+  }
+}

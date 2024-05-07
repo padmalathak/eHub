@@ -1,0 +1,16 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+
+.sidebar-main {
+    min-width: 20%;
+    background-color: #0a112f;
+    min-height: 87vh;
+    display: none;
+
+    @include tablet {
+        display: unset;
+    }
+    @include desktop {
+        display: unset;
+    }
+}
