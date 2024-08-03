@@ -122,7 +122,7 @@ Scope your project as a sprint. Break down the tasks that will need to be comple
 ## Nice-to-haves
 
 - Authentication
-- OAuth Authorization
+- OAuth Authorization - Was able to implement
 - Using Anything as a source to fetch Users
 - 
 
