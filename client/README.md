@@ -39,7 +39,7 @@ The user profile management dashboard provides administrators with a centralized
 
 ### Tech Stack
 
-List technologies that will be used in your app, including any libraries to save time or provide more functionality. Be sure to research any potential limitations.
+React,MySQL,NodeJs
 
 ### APIs
 
